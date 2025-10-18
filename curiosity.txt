@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neat Fades Barbershop</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body id="home">
+    <header class="flex justify-end mt-[2rem]">
+        <div class="overlay">
+            <div class="flex items-center justify-between w-[100vw] mt-[2.1rem]">
+                <h1 class="text-[var(--bg)] text-3xl  ml-[2.19rem] title">✺ Menu</h1>
+                <img id="close-btn" src="/public/icons/close.png" alt="Close Icon" class="w-[3rem]
+                h-[3rem] mr-[2.19rem] cursor-pointer" draggable="false">
+            </div>
+            <div class="mt-[2rem] bg-[var(--gray)] w-[100%] h-[1px]"></div>
+            <ol class="mt-[2rem] flex flex-col gap-5 w-[100vw] px-[2.5rem] text-xl font-[normal]">
+                <li class="text-[var(--bg)]"><a href="#home">Home</a></li>
+                <li class="text-[var(--bg)]"><a href="#services">Services</a></li>
+                <li class="text-[var(--bg)]"><a href="#barbers">Barbers</a></li>
+                <li class="text-[var(--bg)]"><a href="#hours">Hours</a></li>
+            </ol>
+            <h3 class="text-[var(--gray)] text-sm mt-[25rem]">Neat Fades Barbershop</h3>
+        </div> 
+        <nav class="mr-[2rem]">
+            <img id="mobile-nav" src="/public/icons/menu.png" alt="Menu Icon"
+            class="w-[3rem] h-[3rem] cursor-pointer" draggable="false">
+        </nav>
+    </header>
+    <main>
+        <section class="mt-[5.5rem] bg-[var(--txt)]">
+            <div class="flex flex-col items-center justify-center bg-[var(--bg)]
+            pb-[5.5rem] rounded-b-[2rem]">
+                <div>
+                    <p>Est. 2020</p>
+                </div>
+                <h1 class="text-5xl title text-center">Neat Fades Barbershop</h1>
+                <p class="mt-[2rem] text-center w-[30ch]">Delivering precision,
+                professionalism, and style in every cut.</p>
+                <div class="mt-[5rem] mr-[10rem] flex flex-col gap-10">
+                    <p class="w-">Based in <br>
+                        <span class="font-semibold">Madison, WI</span>
+                    </p>
+                    <p class="w-">Owned By <br>
+                        <span class="font-semibold">Edilberto Luna</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="flex flex-col items-center justify-center bg-[var(--txt)] border">
+            <h1 class="mt-[14rem] text-[var(--bg)] text-5xl title">✺ Our Work</h1>
+            <div class="mt-[3.5rem] mb-[14rem] flex gap-10 overflow-x-auto whitespace-nowrap">
+                <img src="/public/galleryImg2.jpg" alt="Gallery Image" class="w-[15rem] rounded-3xl ml-[3rem]">
+                <img src="/public/galleryImg8.jpg" alt="Gallery Image" class="w-[15rem] rounded-3xl">
+                <img src="/public/galleryImg4.jpg" alt="Gallery Image" class="w-[15rem] rounded-3xl">
+                <img src="/public/galleryImg5.jpg" alt="Gallery Image" class="w-[15rem] rounded-3xl">
+                <img src="/public/barbersImgB6.png" alt="Gallery Image" class="w-[15rem] rounded-3xl">
+                <img src="/public/barbersImgB2.png" alt="Gallery Image" class="w-[15rem] rounded-3xl">
+                <img src="/public/barbersImgA5.png" alt="Gallery Image" class="w-[15rem] rounded-3xl">
+            </div>
+        </section>
+
+        <section>
+            <h1>S</h1>
+            <h1>S</h1>
+            <h1>S</h1>
+            <h1>S</h1>
+            <h1>S</h1>
+            <h1>S</h1>
+            <h1>S</h1>
+            <h1>S</h1>
+            <h1>S</h1>
+            <h1>S</h1>
+            <h1>S</h1>
+            <h1>S</h1>
+            <h1>S</h1>
+            <h1>S</h1>
+            <h1>S</h1>
+            <h1>S</h1>
+            <h1>S</h1>
+            <h1>S</h1>
+            <h1>S</h1>
+            <h1>S</h1>
+            <h1>S</h1>
+            <h1>S</h1>
+            <h1>S</h1>
+            <h1>S</h1>
+            <h1>S</h1>
+            <h1>S</h1>
+            <h1>S</h1>
+        </section>
+    </main>
+    <footer>
+        <script src="/src/main.js"></script>
+    </footer>
+</body>
+</html>
+
+@import "tailwindcss";
+* {
+    line-height: calc(1em + 0.5em);
+    font-family: "General Sans";
+}
+:root {
+    /* Colors */
+    --bg: #f5f4f3;
+    --txt: #10100e;
+    --white: white;
+    --gray: #696969;
+    --cal: #b71234;
+
+    /* Sizes */
+    --size-xxs: 0.5rem;
+    --size-xs: 0.75rem;
+    --size-sm: 0.875rem;
+    --size-base: 1rem;
+    --size-lg: 1.125rem;
+    --size-xl: 1.25rem;
+    --size-2xl: 1.5rem;
+    --size-3xl: 1.875rem;
+    --size-4xl: 2.25rem;
+    --size-5xl: 3rem;
+    --size-6xl: 3.75rem;
+    --size-7xl: 4.5rem;
+    --size-8xl: 6rem;
+    --size-9xl: 8rem;
+    --size-10xl: 10rem;
+}
+
+I have this code how can I make the div containing the "Our Work" title and images have a sticky position switch to scrolling through the images horizontally the more the user scrolls vertically? And then once the user scrolls to the last image, return back to scrolling vertically?

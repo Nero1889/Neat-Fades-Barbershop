@@ -32,7 +32,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background-color: var(--bg);
+    background-color: var(--txt);
 }
 .overlay {
     position: fixed;
@@ -56,19 +56,6 @@ body {
     font-family: "Playfair Display";
 }
 
-
-
-
-/* #header-title {
-    font-family: "Libre Caslon Display", sans-serif;
-    font-size: var(--size-5xl);
-    color: var(--txt);
-}
-#header-desc {
-    margin-top: 1rem;
-    font-size: var(--size-base);
-    width: 30ch;
-} */
 
 /* 2xs = (two extra small) */
 @media (min-width: 320px) {}

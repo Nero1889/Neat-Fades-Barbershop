@@ -11,26 +11,38 @@
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body id="home">
-    <header class="flex justify-end pt-[2rem] pb-[5rem] bg-[var(--bg)]">
-        <div class="overlay">
-            <div class="flex items-center justify-between w-[100vw] mt-[2.1rem]">
-                <h1 class="text-[var(--bg)] text-3xl  ml-[2.19rem] title">✺ Menu</h1>
-                <img id="close-btn" src="/public/icons/close.png" alt="Close Icon" class="w-[3rem]
-                h-[3rem] mr-[2.19rem] cursor-pointer" draggable="false">
-            </div>
-            <div class="mt-[2rem] bg-[var(--gray)] w-[100%] h-[1px]"></div>
-            <ol class="mt-[2rem] flex flex-col gap-5 w-[100vw] px-[2.5rem] text-xl font-[normal]">
-                <li class="text-[var(--bg)]"><a href="index.html">Home</a></li>
-                <li class="text-[var(--bg)]"><a href="services.html">Services</a></li>
-                <li class="text-[var(--bg)]"><a href="barbers.html">Barbers</a></li>
-                <li class="text-[var(--bg)]"><a href="hours.html">Hours</a></li>
+    <header class="flex justify-end pt-[2rem] bg-[var(--bg)]">
+        <!-- Mobile Navigation -->
+        <div class="md:hidden">
+            <div class="overlay">
+                <div class="flex items-center justify-between w-[100vw] mt-[2.0rem]">
+                    <h1 class="text-[var(--bg)] text-3xl  ml-[2.04rem] title">✺ Menu</h1>
+                    <img id="close-btn" src="/public/icons/close.png" alt="Close Icon" class="w-[3rem]
+                    h-[3rem] mr-[2.04rem] cursor-pointer" draggable="false">
+                </div>
+                <div class="mt-[2rem] bg-[var(--gray)] w-[100%] h-[1px]"></div>
+                <ol class="mt-[2rem] flex flex-col gap-5 w-[100vw] px-[2.5rem] text-xl font-[normal]">
+                    <li class="text-[var(--bg)]"><a href="index.html">Home</a></li>
+                    <li class="text-[var(--bg)]"><a href="services.html">Services</a></li>
+                    <li class="text-[var(--bg)]"><a href="barbers.html">Barbers</a></li>
+                    <li class="text-[var(--bg)]"><a href="hours.html">Hours</a></li>
+                </ol>
+                <h3 class="text-[var(--gray)] text-sm mt-[25rem]">Neat Fades Barbershop</h3>
+            </div> 
+            <nav class="mr-[2rem]">
+                <img id="mobile-nav" src="/public/icons/menu.png" alt="Menu Icon"
+                class="w-[3rem] h-[3rem] cursor-pointer" draggable="false">
+            </nav>
+        </div>
+        <!-- Desktop Navigation -->
+        <div class="hidden md:block mr-[3rem] mt-[1.5rem] xl:mr-[5rem]">
+            <ol class="flex gap-7 lg:gap-10">
+                <li class="text-[var(--txt)]"><a href="index.html">Home</a></li>
+                <li class="text-[var(--txt)]"><a href="services.html">Services</a></li>
+                <li class="text-[var(--txt)]"><a href="barbers.html">Barbers</a></li>
+                <li class="text-[var(--txt)]"><a href="hours.html">Hours</a></li>
             </ol>
-            <h3 class="text-[var(--gray)] text-sm mt-[25rem]">Neat Fades Barbershop</h3>
-        </div> 
-        <nav class="mr-[2rem]">
-            <img id="mobile-nav" src="/public/icons/menu.png" alt="Menu Icon"
-            class="w-[3rem] h-[3rem] cursor-pointer" draggable="false">
-        </nav>
+        </div>
     </header>
     <main>
         <section class="bg-[var(--txt)]">

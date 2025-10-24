@@ -10,25 +10,65 @@ MENU.addEventListener("click", toggleOverlay);
 CLOSE_BTN.addEventListener("click", toggleOverlay);
 
 
-/* Gallary Horizontal Scrolling */
+/* Gallery Horizontal Scrolling */
 const CONTAINER = document.querySelector("#our-work-container");
 const TRACK = document.querySelector("#image-scroll-track");
 
 if (CONTAINER && TRACK) {
-    function handleHorizontalScroll() {
+    let targetX = 0;
+    let currentX = 0;
+    const EASE = 0.04;
+
+    function handleScroll() {
         const CONTAINER_TOP = CONTAINER.offsetTop;
         const CONTAINER_HEIGHT = CONTAINER.offsetHeight;
         const VIEWPORT_HEIGHT = window.innerHeight;
         const SCROLL_TOP = window.scrollY;
+        
         const SCROLLABLE_DISTANCE = CONTAINER_HEIGHT - VIEWPORT_HEIGHT;
-        const SCROLL_OFFSET = SCROLL_TOP - CONTAINER_TOP; 
-        const PROGRESS = Math.min(1, Math.max(0, SCROLL_OFFSET / (SCROLLABLE_DISTANCE * 1)));
-        const MAX_SCROLL = TRACK.scrollWidth - window.innerWidth;
-        const TRANSFORM_X = PROGRESS * MAX_SCROLL;
+        const SCROLL_OFFSET = SCROLL_TOP - CONTAINER_TOP;
 
-        TRACK.style.transform = `translateX(-${TRANSFORM_X}px)`;
+        if (SCROLLABLE_DISTANCE <= 0) return;
+
+        const PROGRESS = Math.min(1, Math.max(0, SCROLL_OFFSET / SCROLLABLE_DISTANCE));
+        const FULL_MAX_SCROLL = TRACK.scrollWidth - window.innerWidth;
+        const MAX_SCROLL_ADJUSTED = FULL_MAX_SCROLL;
+        targetX = PROGRESS * MAX_SCROLL_ADJUSTED;
     }
 
-    window.addEventListener("scroll", handleHorizontalScroll);
-    handleHorizontalScroll();
+    function animate() {
+        currentX += (targetX - currentX) * EASE; 
+        TRACK.style.transform = `translateX(-${currentX}px)`;
+        requestAnimationFrame(animate);
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    animate();
 }
+
+/* Lazy Loading */
+document.addEventListener("DOMContentLoaded", () => {
+    const ANIMATE = document.querySelectorAll(".lazy-loading");
+
+    const OBSERVER_OPTIONS = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const ANIMATE_OBSERVER = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const ELEMENT = entry.target;
+
+                ELEMENT.classList.add("is-visible");
+                observer.unobserve(ELEMENT);
+            }
+        });
+    }, OBSERVER_OPTIONS);
+
+    ANIMATE.forEach(element => {
+        ANIMATE_OBSERVER.observe(element);
+    });
+});

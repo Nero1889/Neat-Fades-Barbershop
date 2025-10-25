@@ -1,5 +1,5 @@
 # Neat Fades Barbershop:
-![1904x1080](./images/neatFadesBarbershopDesktop.png)
+![1904x1080](./public/neatFadesBarbershopDesktop.png)
 
 One of my first projects, based on a real barbershop located in Madison, WI for one of my cousins! It is in the style of a modern, dynamic website.
 
@@ -29,7 +29,8 @@ Including details about services, ameneties, store hours, location, barbers as w
 ## Responsiveness: 
 
 ### iPad:
-![946x946](./images/neatFadesBarbershopTablet.png)
+![946x946](./public/neatFadesBarbershopTablet.png)
 
 ### iPhone / Mobile Devices:
-![385x948](./images/neatFadesBarbershopMobile.png)
+![385x948](./public/neatFadesBarbershopMobile.png)
+

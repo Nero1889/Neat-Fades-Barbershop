@@ -8,10 +8,10 @@ Including details about services, ameneties, store hours, location, barbers as w
 ## Project Structure:
 
 ### HTML:
-- `index.html`: The main file of the project that contains the user interface and markup.
+- `index.html`: The main file of the project that contains the user interface and markup for the landing page.
 - `services.html`: Provides avaiable services as well as their corresponding prices.
-- `barbers.html`: Shows some of the mosst profesional barbers available, as well as some of their work on customers and a button to schedule an appointment!
-- `hours.html`: Displays store hours, contact (phone number and email), business location, as well as a Google Maps iFrame.
+- `barbers.html`: Shows some of the most profesional barbers available and a button to schedule an appointment!
+- `hours.html`: Displays store hours, contact (phone number and email) and business location
 
 ### CSS:
 - `style.css`: All of the significant styles are located here! As well as the Tailwind CSS import!
@@ -33,4 +33,5 @@ Including details about services, ameneties, store hours, location, barbers as w
 
 ### iPhone / Mobile Devices:
 ![385x948](./public/neatFadesBarbershopMobile.png)
+
 
